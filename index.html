@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitiendita.mois | Smoking Tools & Accesorios Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="main-header" role="banner">
+
+        <!-- Canvas: partículas flotantes animadas -->
+        <canvas id="headerCanvas" aria-hidden="true"></canvas>
+
+        <!-- Barra de estado superior -->
+        <div class="top-bar" role="status" aria-label="Estado de la tienda">
+            <div class="top-bar__inner">
+                <span class="status-live">
+                    <span class="pulse-dot" aria-hidden="true"></span>
+                    Abierto ahora
+                </span>
+                <span class="top-bar__divider" aria-hidden="true">·</span>
+                <span class="top-bar__extra">💨 Smoking Tools & Accesorios desde Coyoacán, CDMX</span>
+            </div>
+        </div>
+
+        <!-- Contenido principal del header -->
+        <div class="header-body">
+            <div class="brand">
+                <!-- Logo -->
+                <div class="brand__logo" aria-hidden="true">
+                    <svg class="brand__logo-leaf" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 4C20 4 6 10 6 22C6 30 12.5 35 20 36C27.5 35 34 30 34 22C34 10 20 4 20 4Z"
+                            fill="currentColor" opacity="0.9" />
+                        <line x1="20" y1="36" x2="20" y2="16" stroke="white" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <line x1="20" y1="28" x2="14" y2="22" stroke="white" stroke-width="1" stroke-linecap="round"
+                            opacity="0.7" />
+                        <line x1="20" y1="24" x2="26" y2="20" stroke="white" stroke-width="1" stroke-linecap="round"
+                            opacity="0.7" />
+                    </svg>
+                </div>
+
+                <div class="brand__text">
+                    <h1 class="brand__name">Mitiendita<span class="brand__name--accent">.mois</span></h1>
+                    <p class="brand__tagline">Smoking Tools & Artículos Premium</p>
+                </div>
+            </div>
+
+            <!-- Contacto -->
+            <address class="header-contact">
+                <a class="contact-item" href="https://wa.me/525613017264" target="_blank" rel="noopener noreferrer"
+                    aria-label="Contactar por WhatsApp">
+                    <span class="contact-item__icon" aria-hidden="true">💬</span>
+                    <span class="contact-item__text">WhatsApp</span>
+                </a>
+                <a class="contact-item" href="https://maps.google.com/?q=Av.+Copilco+76+Coyoacán+CDMX" target="_blank"
+                    rel="noopener noreferrer" aria-label="Ver ubicación en mapa">
+                    <span class="contact-item__icon" aria-hidden="true">📍</span>
+                    <span class="contact-item__text">Av. Copilco #76, Coyoacán</span>
+                </a>
+            </address>
+        </div>
+
+        <!-- Barra de confianza -->
+        <div class="trust-bar" role="list" aria-label="Datos de confianza">
+            <div class="trust-item" role="listitem">
+                <strong class="trust-item__number">+200</strong>
+                <span class="trust-item__label">Productos</span>
+            </div>
+            <div class="trust-bar__divider" aria-hidden="true"></div>
+            <div class="trust-item" role="listitem">
+                <strong class="trust-item__number">4.9 ★</strong>
+                <span class="trust-item__label">Calificación</span>
+            </div>
+            <div class="trust-bar__divider" aria-hidden="true"></div>
+            <div class="trust-item" role="listitem">
+                <strong class="trust-item__number">Premium</strong>
+                <span class="trust-item__label">Calidad</span>
+            </div>
+            <div class="trust-bar__divider" aria-hidden="true"></div>
+            <div class="trust-item" role="listitem">
+                <strong class="trust-item__number">5 años</strong>
+                <span class="trust-item__label">En el mercado</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================== MAIN ===================== -->
+    <main id="main-content" role="main">
+
+        <!-- Filtros de categoría sticky -->
+        <nav class="categories-nav" aria-label="Filtrar por categoría">
+            <div class="categories-wrapper">
+                <div class="categories" id="categoryContainer" role="tablist">
+                    <button class="category-btn active" data-target="todos" role="tab" aria-selected="true">
+                        <span class="category-btn__label">Ver todos</span>
+                    </button>
+                    <button class="category-btn" data-target="vaporizadores" role="tab" aria-selected="false">
+                        <span class="category-btn__icon" aria-hidden="true">💨</span>
+                        <span class="category-btn__label">Vaporizadores</span>
+                    </button>
+                    <button class="category-btn" data-target="charolas" role="tab" aria-selected="false">
+                        <span class="category-btn__icon" aria-hidden="true">🪵</span>
+                        <span class="category-btn__label">Charolas</span>
+                    </button>
+                    <button class="category-btn" data-target="sopletes" role="tab" aria-selected="false">
+                        <span class="category-btn__icon" aria-hidden="true">🔦</span>
+                        <span class="category-btn__label">Sopletes</span>
+                    </button>
+                    <button class="category-btn" data-target="grinders" role="tab" aria-selected="false">
+                        <span class="category-btn__icon" aria-hidden="true">⚙️</span>
+                        <span class="category-btn__label">Grinders</span>
+                    </button>
+                    <button class="category-btn" data-target="papeles" role="tab" aria-selected="false">
+                        <span class="category-btn__icon" aria-hidden="true">📜</span>
+                        <span class="category-btn__label">Papeles</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Catálogo -->
+        <section class="catalog-section" aria-label="Catálogo de productos">
+            <div class="catalog-header">
+                <!-- Leyenda Legal de Protección -->
+                <p
+                    style="text-align: center; color: var(--text-muted); font-size: 0.75rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.05em;">
+                    ⚠️ Sitio exclusivo para mayores de 18 años. Catálogo de smoking tools y accesorios para fumadores.
+                </p>
+                <p class="catalog-count" id="catalogCount" aria-live="polite">6 productos</p>
+            </div>
+
+            <div class="product-grid" id="productGrid" role="list">
+
+                <!-- Vaporizador -->
+                <article class="product-card" data-category="vaporizadores" role="listitem">
+                    <div class="product-card__media">
+                        <img src="https://images.unsplash.com/photo-1512446816042-444d641267d4?w=500&auto=format&fit=crop&q=80"
+                            alt="Vaporizador Portátil Pro" class="product-img" loading="lazy">
+                        <span class="product-card__badge product-card__badge--hot">⭐ Popular</span>
+                    </div>
+                    <div class="product-card__body">
+                        <h2 class="product-title">Vaporizador Portátil</h2>
+                        <p class="product-desc">Control de temperatura exacto. Ideal para diversas mezclas secas.
+                            Batería de larga duración.</p>
+                        <div class="product-card__footer">
+                            <span class="product-price" aria-label="Precio: 450 pesos">$450</span>
+                            <button class="btn-order btn-details"
+                                data-wa="https://wa.me/525613017264?text=Hola%2C%20me%20interesa%20el%20Vaporizador%20Port%C3%A1til">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Grinder -->
+                <article class="product-card" data-category="grinders" role="listitem">
+                    <div class="product-card__media">
+                        <img src="https://res.cloudinary.com/duvjh1kfi/image/upload/v1782598709/images1_je819e.jpg"
+                            alt="Grinder metálico 4 piezas" class="product-img" loading="lazy">
+                        <span class="product-card__badge">Metal</span>
+                    </div>
+                    <div class="product-card__body">
+                        <h2 class="product-title">Grinder 4 Piezas</h2>
+                        <p class="product-desc">Aluminio anodizado. Malla colectora incluida. Molienda uniforme y
+                            precisa.</p>
+                        <div class="product-card__footer">
+                            <span class="product-price" aria-label="Precio: 180 pesos">$180</span>
+                            <button class="btn-order btn-details"
+                                data-wa="https://wa.me/525613017264?text=Hola%2C%20me%20interesa%20el%20Grinder%204%20Piezas">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Charola Genérica -->
+                <article class="product-card" data-category="charolas" role="listitem">
+                    <div class="product-card__media">
+                        <img src="https://res.cloudinary.com/duvjh1kfi/image/upload/v1782598933/images3_q6xie6.jpg"
+                            alt="Charola de bambú para preparación" class="product-img" loading="lazy">
+                        <span class="product-card__badge">Bambú</span>
+                    </div>
+                    <div class="product-card__body">
+                        <h2 class="product-title">Charola RAW de Bambú </h2>
+                        <p class="product-desc">Material natural de bambú. Superficie lisa, bordes redondeados.
+                            Excelente accesorio de organización.</p>
+                        <div class="product-card__footer">
+                            <span class="product-price" aria-label="Precio: 120 pesos">$120</span>
+                            <button class="btn-order btn-details"
+                                data-wa="https://wa.me/525613017264?text=Hola%2C%20me%20interesa%20la%20Charola%20de%20Preparaci%C3%B3n">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Papeles Genéricos -->
+                <article class="product-card" data-category="papeles" role="listitem">
+                    <div class="product-card__media">
+                        <img src="https://res.cloudinary.com/duvjh1kfi/image/upload/v1782598408/images2_wedz3r.jpg"
+                            alt="Papeles de arroz King Size" class="product-img" loading="lazy">
+                        <span class="product-card__badge">Clásico</span>
+                    </div>
+                    <div class="product-card__body">
+                        <h2 class="product-title">Papeles King Size Naturales</h2>
+                        <p class="product-desc">Sin blanquear, fibra natural de arroz. Combustión lenta y uniforme. Pack
+                            de 32 hojas.</p>
+                        <div class="product-card__footer">
+                            <span class="product-price" aria-label="Precio: 35 pesos">$35</span>
+                            <button class="btn-order btn-details"
+                                data-wa="https://wa.me/525613017264?text=Hola%2C%20me%20interesan%20los%20Papeles%20King%20Size">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Soplete -->
+                <article class="product-card" data-category="sopletes" role="listitem">
+                    <div class="product-card__media">
+                        <img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?w=500&auto=format&fit=crop&q=80"
+                            alt="Soplete recargable de metal" class="product-img" loading="lazy">
+                        <span class="product-card__badge">Recargable</span>
+                    </div>
+                    <div class="product-card__body">
+                        <h2 class="product-title">Soplete de Metal Pro</h2>
+                        <p class="product-desc">Recargable con gas butano. Flama potente y estable. Cuerpo resistente a
+                            altas temperaturas.</p>
+                        <div class="product-card__footer">
+                            <span class="product-price" aria-label="Precio: 139 pesos">$139</span>
+                            <button class="btn-order btn-details"
+                                data-wa="https://wa.me/525613017264?text=Hola%2C%20me%20interesa%20el%20Soplete%20de%20Metal">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Grinder de madera -->
+                <article class="product-card" data-category="grinders" role="listitem">
+                    <div class="product-card__media">
+                        <img src="https://res.cloudinary.com/duvjh1kfi/image/upload/v1782599585/images4_ayrbtf.jpg"
+                            alt="Grinder de madera artesanal" class="product-img" loading="lazy">
+                        <span class="product-card__badge product-card__badge--eco">Premium</span>
+                    </div>
+                    <div class="product-card__body">
+                        <h2 class="product-title">Grinder de Madera</h2>
+                        <p class="product-desc">Madera artesanal tallada a mano. Diseño único, dientes de metal templado
+                            para cortes precisos.</p>
+                        <div class="product-card__footer">
+                            <span class="product-price" aria-label="Precio: 220 pesos">$220</span>
+                            <button class="btn-order btn-details"
+                                data-wa="https://wa.me/525613017264?text=Hola%2C%20me%20interesa%20el%20Grinder%20de%20Madera">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Estado vacío -->
+            <div class="empty-state" id="emptyState" hidden aria-live="polite">
+                <span class="empty-state__icon" aria-hidden="true">📦</span>
+                <p class="empty-state__msg">No hay productos en esta categoría aún.</p>
+                <p class="empty-state__sub">Escríbenos por WhatsApp para preguntar disponibilidad.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+                <div class="footer-logo" aria-hidden="true">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                        <path d="M20 4C20 4 6 10 6 22C6 30 12.5 35 20 36C27.5 35 34 30 34 22C34 10 20 4 20 4Z"
+                            fill="currentColor" />
+                        <line x1="20" y1="36" x2="20" y2="16" stroke="white" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="footer-brand__name">Mitiendita.mois</p>
+                    <p class="footer-brand__tagline">Smoking Tools & Accesorios · CDMX</p>
+                </div>
+            </div>
+
+            <nav class="footer-links" aria-label="Contacto y redes">
+                <a href="https://wa.me/525613017264" target="_blank" rel="noopener noreferrer" class="footer-link">
+                    <span aria-hidden="true">💬</span> WhatsApp
+                </a>
+                <a href="https://instagram.com/mitiendita.mois" target="_blank" rel="noopener noreferrer"
+                    class="footer-link">
+                    <span aria-hidden="true">📸</span> Instagram
+                </a>
+                <a href="https://maps.google.com/?q=Av.+Copilco+76+Coyoacán+CDMX" target="_blank"
+                    rel="noopener noreferrer" class="footer-link">
+                    <span aria-hidden="true">📍</span> Cómo llegar
+                </a>
+            </nav>
+
+            <div class="footer-hours">
+                <p class="footer-hours__title">Horario de atención</p>
+                <p class="footer-hours__time">Lun – Sáb &nbsp;·&nbsp; 10:00 – 20:00</p>
+                <p class="footer-hours__time">Dom &nbsp;·&nbsp; 11:00 – 17:00</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> Mitiendita.mois · Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ===================== MODAL DE PRODUCTO ===================== -->
+    <div class="modal-overlay" id="productModal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" id="closeModal" aria-label="Cerrar detalles">✕</button>
+
+            <div class="modal-layout">
+                <div class="modal-media">
+                    <img src="" alt="" id="modalImg" class="modal-img">
+                </div>
+
+                <div class="modal-info">
+                    <h2 id="modalTitle" class="modal-title">Título</h2>
+                    <p id="modalDesc" class="modal-desc">Descripción detallada aparecerá aquí...</p>
+
+                    <div class="modal-footer">
+                        <span id="modalPrice" class="modal-price">$0</span>
+                        <a href="#" id="modalWaBtn" target="_blank" rel="noopener noreferrer"
+                            class="btn-order btn-order--large">
+                            Pedir por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== BURBUJA WHATSAPP ===================== -->
+    <a href="https://wa.me/525613017264?text=Hola%2C%20me%20interesa%20conocer%20sus%20productos" target="_blank"
+        rel="noopener noreferrer" class="whatsapp-bubble" aria-label="Chatear por WhatsApp">
+        <svg class="whatsapp-bubble__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+            aria-hidden="true">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        <span class="whatsapp-bubble__tooltip">¡Escríbenos!</span>
+        <span class="whatsapp-bubble__dot" aria-hidden="true"></span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
